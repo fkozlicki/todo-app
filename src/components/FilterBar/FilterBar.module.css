@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background: var(--light-background);
+  padding: 20px;
+  border-radius: 5px;
+  gap: 15px;
+}
+.container button {
+  font-size: 14px;
+  color: var(--very-light-text);
+  font-weight: 700;
+}
+.container button:hover {
+  color: var(--light-text);
+}
+.container button.active {
+  color: var(--blue);
+}
