@@ -1,0 +1,16 @@
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: -16px 50px 47px 9px rgba(22, 23, 34, 0.13);
+  -webkit-box-shadow: -16px 50px 47px 9px rgba(22, 23, 34, 0.13);
+  -moz-box-shadow: -16px 50px 47px 9px rgba(22, 23, 34, 0.13);
+}
+.message {
+  font-size: 14px;
+  text-align: center;
+  background: var(--light-background);
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--light-border);
+  color: var(--very-light-text);
+}
