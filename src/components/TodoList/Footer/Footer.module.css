@@ -1,0 +1,17 @@
+.footer {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-background);
+}
+.itemsLeft {
+  color: var(--very-light-text);
+  font-size: 12px;
+}
+.btn {
+  color: var(--very-light-text);
+  font-size: 12px;
+}
+.btn:hover {
+  color: var(--light-text);
+}
