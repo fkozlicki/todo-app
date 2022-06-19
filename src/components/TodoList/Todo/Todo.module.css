@@ -1,0 +1,63 @@
+.todo {
+  display: flex;
+  align-items: center;
+  background: var(--light-background);
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.content {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-text);
+}
+.completed {
+  color: var(--border);
+  text-decoration: line-through;
+}
+.delete {
+  margin-left: auto;
+}
+.completedBox {
+  position: relative;
+  overflow: hidden;
+}
+.completedInput {
+  position: absolute;
+  left: -999999px;
+}
+.completedLabel {
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+
+  background: linear-gradient(var(--light-background), var(--light-background))
+      padding-box,
+    var(--border) border-box;
+  border-radius: 50em;
+  border: 1px solid transparent;
+}
+.completedLabel:hover {
+  background: linear-gradient(var(--light-background), var(--light-background))
+      padding-box,
+    var(--gradient) border-box;
+}
+.active {
+  background: var(--gradient);
+  border: none;
+}
+.checkIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.deleteIcon {
+  width: 13px;
+  height: 13px;
+}
