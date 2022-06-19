@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  align-items: center;
+  background: var(--light-background);
+  padding: 15px 20px;
+  border-radius: 5px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.completedBox {
+  position: relative;
+  overflow: hidden;
+}
+.completedInput {
+  position: absolute;
+  left: -999999px;
+}
+.completedLabel {
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+
+  background: linear-gradient(var(--light-background), var(--light-background))
+      padding-box,
+    var(--border) border-box;
+  border-radius: 50em;
+  border: 1px solid transparent;
+}
+.completedLabel:hover {
+  background: linear-gradient(var(--light-background), var(--light-background))
+      padding-box,
+    var(--gradient) border-box;
+}
+.active {
+  background: var(--gradient);
+  border: none;
+}
+.checkIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.todoInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+}
