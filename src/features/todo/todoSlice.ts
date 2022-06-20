@@ -32,14 +32,13 @@ export const { reducer, actions } = createSlice({
       state.todoList = action.payload;
     },
     add: (state, action: PayloadAction<ITodo>) => {
-      state.todoList.push(action.payload);
+      state.todoList.unshift(action.payload);
     },
     changeCompleted: (
       state,
       action: PayloadAction<{ id: string; isCompleted: boolean }>
     ) => {
       const { id, isCompleted } = action.payload;
-      console.log(id, isCompleted);
 
       state.todoList.map(
         (todo) => todo.id === id && (todo.completed = isCompleted)
