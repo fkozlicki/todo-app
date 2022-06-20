@@ -5,6 +5,10 @@
   padding: 20px;
   border-radius: 5px;
   gap: 15px;
+
+  box-shadow: 0px 25px 47px 9px rgba(22, 23, 34, 0.13);
+  -webkit-box-shadow: 0px 25px 47px 9px rgba(22, 23, 34, 0.13);
+  -moz-box-shadow: 0px 25px 47px 9px rgba(22, 23, 34, 0.13);
 }
 .container button {
   font-size: 14px;
