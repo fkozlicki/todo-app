@@ -65,7 +65,7 @@ const Todo: React.FC<TodoProps> = ({ todo, index }) => {
             {todo.completed && (
               <img
                 className={styles.checkIcon}
-                src="/images/icon-check.svg"
+                src={`${process.env.PUBLIC_URL}/images/icon-check.svg`}
                 alt=""
               />
             )}
@@ -84,7 +84,7 @@ const Todo: React.FC<TodoProps> = ({ todo, index }) => {
           >
             <img
               className={styles.deleteIcon}
-              src="/images/icon-cross.svg"
+              src={`${process.env.PUBLIC_URL}/images/icon-cross.svg`}
               alt=""
             />
           </button>

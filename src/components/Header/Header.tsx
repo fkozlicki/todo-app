@@ -17,7 +17,9 @@ const Header = () => {
         <img
           className={styles.toggleImg}
           src={
-            theme === 'light' ? '/images/icon-moon.svg' : '/images/icon-sun.svg'
+            theme === 'light'
+              ? `${process.env.PUBLIC_URL}/images/icon-moon.svg`
+              : `${process.env.PUBLIC_URL}/images/icon-sun.svg`
           }
           alt=""
         />

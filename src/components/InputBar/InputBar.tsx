@@ -47,7 +47,7 @@ const SearchBar = () => {
         {completed && (
           <img
             className={styles.checkIcon}
-            src="/images/icon-check.svg"
+            src={`${process.env.PUBLIC_URL}/images/icon-check.svg`}
             alt=""
           />
         )}
