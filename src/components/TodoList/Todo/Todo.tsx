@@ -77,7 +77,11 @@ const Todo: React.FC<TodoProps> = ({ todo, index }) => {
           >
             {todo.content}
           </p>
-          <button onClick={handleDelete} className={styles.delete}>
+          <button
+            data-testid="deleteBtn"
+            onClick={handleDelete}
+            className={styles.delete}
+          >
             <img
               className={styles.deleteIcon}
               src="/images/icon-cross.svg"

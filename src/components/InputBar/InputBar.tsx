@@ -60,6 +60,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Create a new todo..."
       />
+      <button type="submit"></button>
     </form>
   );
 };

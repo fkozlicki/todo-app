@@ -15,8 +15,6 @@ const Footer = () => {
     .filter((todo) => todo.completed)
     .map((todo) => todo.id);
 
-  console.log(idsOfCompleted);
-
   const handleDeleteCompleted = async () => {
     await deleteCompleted(idsOfCompleted);
     dispatch(todoActions.deleteCompleted());

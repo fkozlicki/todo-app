@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, within, fireEvent } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { store } from '../../app/store';
@@ -13,12 +13,23 @@ const renderApp = () => {
   );
 };
 
-// beforeEach(renderApp);
+beforeEach(renderApp);
+afterEach(cleanup);
 
-test('check if input value change', () => {
-  renderApp();
+test('check if input value change', async () => {
+  const inputEl = screen.getByTestId<HTMLInputElement>('todoInput');
 
-  userEvent.type(screen.getByTestId('todoInput'), 'first todo');
+  await userEvent.type(inputEl, 'first todo');
 
-  expect(screen.getByTestId('todoInput')).toHaveDisplayValue('first todo');
+  expect(inputEl).toHaveValue('first todo');
+});
+
+test('adding todo', async () => {
+  const inputEl = screen.getByTestId<HTMLInputElement>('todoInput');
+
+  await userEvent.type(inputEl, 'first todo{enter}');
+
+  const firstTodo = await screen.findByText(/first todo/i);
+
+  expect(firstTodo).toBeInTheDocument();
 });
